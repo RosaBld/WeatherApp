@@ -5,7 +5,24 @@ weather informations for the next 5 days or so.
 
 The next stage of this challenge was to create a local storage to allow the client to check the weather they already checked eventhough they reloaded the page.
 
+
+
+## Resume
+
+In this weather app, you can select the city from where you want the weather.
+
+It will display for you the forecast of the 5 next day (including today) with the date (including the day of the week), an cute little icon with the forecast, the min and max temperature and the weather (rain ? snow ? sun ?).
+
+You'll also be abble to select multiple cities if you need to compare their weather for the next few days.
+
+Every past research will be stored on your side and every time you'll reload the page, you'll still see your previous researches with the different forecasts still showing on your awesome webpage.
+
+To clean it, you simply have to ckicl on the magnificient button at the bottom of the page.
+
 ---
+
+!Be Careful, this project is still under construction!
+
 
 #### Langages:
 
