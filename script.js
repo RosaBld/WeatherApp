@@ -38,35 +38,47 @@ cityArray.forEach((cities) => {
             now.classList.add('now');
             city.appendChild(now);
 
+            let cityInfo=document.createElement('div'); 
+            cityInfo.classList.add('city-info');
+            now.appendChild(cityInfo);
+
             let cityName = document.createElement('h3');
             cityName.classList.add('city-name');
             cityName.textContent = `${json.city.name}, ${json.city.country}`;
-            now.appendChild(cityName);
+            cityInfo.appendChild(cityName);
 
-            let today=document.createElement('div');
-            today.classList.add('today');
-            today.textContent=`Today`;
-            now.appendChild(today);
-
-            let weatherIcon = document.createElement('img');
-            weatherIcon.classList.add('weather-icon');
-            weatherIcon.src = `http://openweathermap.org/img/wn/${json.list[0].weather[0].icon}.png`;
-            now.appendChild(weatherIcon);
-
-            let weatherToday=document.createElement('div');
-            weatherToday.classList.add('weather-today');
-            weatherToday.textContent=`${json.list[0].weather[0].main}`;
-            now.appendChild(weatherToday);
+            let weatherInfo=document.createElement('div');
+            weatherInfo.classList.add('weather-info');
+            cityInfo.appendChild(weatherInfo);
 
             let tempToday=document.createElement('div');
             tempToday.classList.add('temp-today');
             tempToday.textContent=`${Math.round(json.list[0].main.temp - 273.15)}°C`;
-            now.appendChild(tempToday);
+            weatherInfo.appendChild(tempToday)
+
+            let weatherIcon = document.createElement('img');
+            weatherIcon.classList.add('weather-icon');
+            weatherIcon.src = `http://openweathermap.org/img/wn/${json.list[0].weather[0].icon}.png`;
+            weatherInfo.appendChild(weatherIcon);
+
+            let infoToday=document.createElement('div');
+            infoToday.classList.add('info-today');
+            now.appendChild(infoToday);
+
+            // let today=document.createElement('div');
+            // today.classList.add('today');
+            // today.textContent=`Today`;
+            // infoToday.appendChild(today);
+
+            let weatherToday=document.createElement('div');
+            weatherToday.classList.add('weather-today');
+            weatherToday.textContent=`${json.list[0].weather[0].main}`;
+            infoToday.appendChild(weatherToday);
 
             let wind=document.createElement('div');
             wind.classList.add('wind');
             wind.textContent=`Wind: ${json.list[0].wind.speed} km/h`;
-            now.appendChild(wind);
+            infoToday.appendChild(wind);
 
             
             let forecast = document.createElement('div');
@@ -140,10 +152,20 @@ cityArray.forEach((cities) => {
             city.classList.add('city');
             result.appendChild(city);
       
-            let cityName = document.createElement('h3');
-            cityName.classList.add('city-name');
-            cityName.innerHTML = cityData.name;
-            city.appendChild(cityName);
+            let now=document.createElement('div');
+            now.classList.add('now');
+            city.appendChild(now);
+
+            let forecast=document.createElement('div');
+            forecast.classList.add('forecast');
+            city.appendChild(forecast);
+
+            city.innerHTML = cityData.name;
+            
+            // let cityName = document.createElement('h3');
+            // cityName.classList.add('city-name');
+            // cityName.innerHTML = cityData.name;
+            // city.appendChild(cityName);
           }
         }
     });

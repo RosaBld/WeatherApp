@@ -1,0 +1,181 @@
+@media only screen and (min-width: 409px) and (max-width:580px) {
+    .forecast {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px white;
+        padding: 25px;
+        border-radius: 10px;
+        min-width: 220px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.1px);
+        -webkit-backdrop-filter: blur(5.1px);
+        border: 1px solid rgba(255, 255, 255, 0.76);
+
+        .forecast-item {
+                width: 40px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                text-align: center;
+                padding: 15px;
+                border: solid 1px rgb(170, 170, 170);
+                border-radius: 5px;
+                box-shadow: 5px 5px 5px rgb(64, 10, 95);
+
+            .forecast-icon {
+                    height: 40px;
+                    justify-self: center;
+                    align-self: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 580px) and (max-width:625px) {
+    .forecast {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px white;
+        padding: 25px;
+        border-radius: 10px;
+        min-width: 220px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.1px);
+        -webkit-backdrop-filter: blur(5.1px);
+        border: 1px solid rgba(255, 255, 255, 0.76);
+
+        .forecast-item {
+                width: 40px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                text-align: center;
+                padding: 15px;
+                border: solid 1px rgb(170, 170, 170);
+                border-radius: 5px;
+                box-shadow: 5px 5px 5px rgb(64, 10, 95);
+
+            .forecast-icon {
+                    height: 40px;
+                    justify-self: center;
+                    align-self: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 625px) and (max-width:768px) {
+    .forecast {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px white;
+        padding: 25px 70px 25px 70px;
+        border-radius: 10px;
+        min-width: 320px;
+        max-width: 768px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.1px);
+        -webkit-backdrop-filter: blur(5.1px);
+        border: 1px solid rgba(255, 255, 255, 0.76);
+
+        .forecast-item {
+                width: 60px;
+                display:grid;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                text-align: center;
+                padding: 15px;
+                border: solid 1px rgb(170, 170, 170);
+                border-radius: 5px;
+                box-shadow: 5px 5px 5px rgb(64, 10, 95);
+
+            .forecast-icon {
+                    height: 80px;
+                    justify-self: center;
+                    align-self: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:942px) {
+
+    .forecast {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border: solid 1px white;
+        border-radius: 10px;
+        padding: 30px 10px 30px 10px;
+        background: rgba(255, 255, 255, 0.09);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.1px);
+        -webkit-backdrop-filter: blur(5.1px);
+        border: 1px solid rgba(255, 255, 255, 0.76);
+
+
+        .forecast-item {
+                display:grid;
+                text-align: center;
+                padding: 15px;
+                border: solid 1px rgb(170, 170, 170);
+                border-radius: 5px;
+                box-shadow: 5px 5px 5px rgb(64, 10, 95);
+                width: 100px;
+
+
+            .forecast-icon {
+                    height: 80px;
+                    justify-self: center;
+                    align-self: center;
+            }
+        }
+    }
+    
+}
+
+@media only screen and (min-width:942px) and (max-width:1550px) {
+
+    .forecast {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px white;
+        border-radius: 10px;
+        padding: 50px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.1px);
+        -webkit-backdrop-filter: blur(5.1px);
+        border: 1px solid rgba(255, 255, 255, 0.76);
+
+        .forecast-item {
+                display:grid;
+                gap: 10px;
+                text-align: center;
+                padding: 15px;
+                border: solid 1px rgb(170, 170, 170);
+                border-radius: 5px;
+                box-shadow: 5px 5px 5px rgb(64, 10, 95);
+
+            .forecast-icon {
+                    height: 100px;
+                    justify-self: center;
+                    align-self: center;
+            }
+        }
+    }
+}

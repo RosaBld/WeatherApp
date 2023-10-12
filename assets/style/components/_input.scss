@@ -1,0 +1,12 @@
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+
+    .search-bar {
+        border-radius: 550px;
+        height: 20px;
+    }
+}
