@@ -1,14 +1,9 @@
-h1{
-    text-align: center;
-    font-family: 'Lora', serif;
-    font-size: 50px;
-}
+@charset "utf-8";
 
-h2 {
-    text-align: center;
-    font-family: 'Lora', serif;
-    font-size: 30px;
-}
+@import './assets/style/base/__base-dir';
+@import './assets/style/components/__components-dir';
+@import './assets/style/layouts/__layout_dir';
+
 
 .search-box {
     display: flex;
@@ -20,92 +15,42 @@ h2 {
     .search-bar {
         border-radius: 550px;
         height: 20px;
-        font-family: 'Gabarito', sans-serif;
-        font-size: 20px;
     }
-
-    .search-btn {
-        float: right;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(91, 30, 148);
-        transition: .3s;
-        svg {
-            width: 20px;
-            height: 20px;
-            filter:invert(100%);
-        }
-        &:hover {
-            cursor: pointer;
-            filter: drop-shadow(0px 0px 5px rgb(64, 10, 95));
-            transform: scale(1.2);
-        }
-    }
-
 }
 
-.result {
-    .city {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+.city {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 50px;
+    border-bottom: solid 3px rgb(64, 10, 95);
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    .forecast {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 40px;
         justify-content: center;
-        gap: 20px;
-        padding-bottom: 50px;
-        border-bottom: solid 3px rgb(64, 10, 95);
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
+        align-items: center;
 
-        .city-name {
-            font-family: 'Lora', serif;
-            font-size: 35px;
-        }
+        .forecast-item {
+            width: 140px;
+            display:grid;
+            gap: 10px;
+            text-align: center;
+            padding: 15px;
+            border: solid 1px rgb(170, 170, 170);
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px rgb(64, 10, 95);
 
-        .forecast {
-            display: grid;
-            grid-template-columns: auto auto auto auto auto;
-            gap: 40px;
-            justify-content: center;
-            align-items: center;
-
-            .forecast-item {
-                width: 140px;
-                display:grid;
-                gap: 10px;
-                text-align: center;
-                padding: 15px;
-                border: solid 1px rgb(170, 170, 170);
-                border-radius: 5px;
-                box-shadow: 5px 5px 5px rgb(64, 10, 95);
-
-
-                .forecast-date {
-                    font-family: 'Young Serif', serif;
-                    font-size: 20px;
-                    height: 60px;
-                    
-                }
-
-                .forecast-icon {
-                    height: 100px;
-                    justify-self: center;
-                    align-self: center;
-                }
-
-                .forecast-temp {
-                    font-family: 'Gabarito', sans-serif;
-                    font-size: 15px;
-                }
-
-                .forecast-weather {
-                    font-family: 'Gabarito', serif;
-                    font-size: 20px;
-                }
+            .forecast-icon {
+                height: 100px;
+                justify-self: center;
+                align-self: center;
             }
         }
     }
@@ -118,24 +63,4 @@ h2 {
     gap: 20px;
     margin-top: 50px;
     margin-bottom: 50px;
-
-    .clear-storage {
-        width: 250px;
-        border-radius: 50px;
-        border: solid 1px rgb(170, 170, 170);
-        padding: 10px;
-        background-color: rgb(91, 30, 148);
-        color: white;
-        font-family: 'Gabarito', sans-serif;
-        font-size: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: .3s;
-        &:hover {
-            cursor: pointer;
-            filter: drop-shadow(0px 0px 5px rgb(64, 10, 95));
-            transform: scale(1.2);
-        }
-    }
 }

@@ -34,11 +34,41 @@ cityArray.forEach((cities) => {
             city.classList.add('city');
             result.appendChild(city);
 
+            let now=document.createElement('div');
+            now.classList.add('now');
+            city.appendChild(now);
+
             let cityName = document.createElement('h3');
             cityName.classList.add('city-name');
             cityName.textContent = `${json.city.name}, ${json.city.country}`;
-            city.appendChild(cityName);
+            now.appendChild(cityName);
 
+            let today=document.createElement('div');
+            today.classList.add('today');
+            today.textContent=`Today`;
+            now.appendChild(today);
+
+            let weatherIcon = document.createElement('img');
+            weatherIcon.classList.add('weather-icon');
+            weatherIcon.src = `http://openweathermap.org/img/wn/${json.list[0].weather[0].icon}.png`;
+            now.appendChild(weatherIcon);
+
+            let weatherToday=document.createElement('div');
+            weatherToday.classList.add('weather-today');
+            weatherToday.textContent=`${json.list[0].weather[0].main}`;
+            now.appendChild(weatherToday);
+
+            let tempToday=document.createElement('div');
+            tempToday.classList.add('temp-today');
+            tempToday.textContent=`${Math.round(json.list[0].main.temp - 273.15)}°C`;
+            now.appendChild(tempToday);
+
+            let wind=document.createElement('div');
+            wind.classList.add('wind');
+            wind.textContent=`Wind: ${json.list[0].wind.speed} km/h`;
+            now.appendChild(wind);
+
+            
             let forecast = document.createElement('div');
             forecast.classList.add('forecast');
             city.appendChild(forecast);
@@ -69,8 +99,8 @@ cityArray.forEach((cities) => {
                 let temps = json.list.slice(i, i + 8).map(item => item.main.temp - 273.15);
                 let minTemp = Math.min(...temps);
                 let maxTemp = Math.max(...temps);
-
                 forecastItem.appendChild(forecastTemp);
+
                 let forecastTempMin = document.createElement('p');
                 forecastTempMin.textContent = `Min: ${Math.round(minTemp)}°C`;
                 forecastTemp.appendChild(forecastTempMin);
