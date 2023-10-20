@@ -21,7 +21,7 @@ To clean it, you simply have to ckicl on the magnificient button at the bottom o
 
 ### Where is it ?
 
-You can check this awesome weather App [here}(https://brilliant-lokum-7d1e49.netlify.app/)!
+You can check this awesome weather App [here](https://brilliant-lokum-7d1e49.netlify.app/)!
 
 ---
 
